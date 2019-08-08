@@ -6,8 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y\
     wget\
     gnupg\ 
-    python=3.6.7*\
-    python-pip\
+    python3=3.6.7*\
+    python3-pip\
     ants=2.2.0*\
     graphviz=2.40.1*\
     liblapack-dev \
