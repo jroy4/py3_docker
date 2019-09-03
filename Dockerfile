@@ -26,12 +26,15 @@ RUN apt-get update && apt-get install -y\
     jupyter==1.0.0 \
     jupyterlab==0.33.12 \
     pymc3==3.7 \ 
+    theano==1.0.4 \
     && jupyter labextension install jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
 EXPOSE 8888
 RUN mkdir /.local && chmod -R 777 /.local &&\
-    mkdir /.jupyter && chmod -R 777 /.jupyter
+    mkdir /.jupyter && chmod -R 777 /.jupyter &&\
+    mkdir /.theano && chmod -R 777 /.theano
+
 
 COPY ./.jupyter /.jupyter
 COPY . /app
