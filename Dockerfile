@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -y\
     traits==4.6.0 \
     nipy==0.4.2 \
     nipype==1.1.9 \
-    matplotlib==2.1.1 \
+    matplotlib==3.1.1 \
     jupyter==1.0.0 \
     jupyterlab==0.33.12 \
     pymc3==3.7 \ 
