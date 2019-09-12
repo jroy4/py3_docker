@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y\
     jupyterlab==0.33.12 \
     pymc3==3.7 \ 
     theano==1.0.4 \
+    graphviz==0.13 \
     && jupyter labextension install jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
