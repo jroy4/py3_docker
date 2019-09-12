@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y\
     gnupg\ 
     python3=3.6.7*\
     python3-pip\
+    python3-tk=3.6.8*\
     ants=2.2.0*\
     graphviz=2.40.1*\
     liblapack-dev \
