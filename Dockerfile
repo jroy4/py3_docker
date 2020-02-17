@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y\
     gnupg\ 
     python3=3.6.7*\
     python3-pip\
-    python3-tk=3.6.8*\
+    python3-tk=3.6.9*\
     ants=2.2.0*\
     graphviz=2.40.1*\
     liblapack-dev \
@@ -30,6 +30,8 @@ RUN apt-get update && apt-get install -y\
     theano==1.0.4 \
     graphviz==0.13 \
     arviz==0.4.1 \
+    neurocombat-sklearn==0.1.3 \
+    sklearn-pandas==1.8.0 \
     && jupyter labextension install jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
