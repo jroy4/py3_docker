@@ -32,6 +32,7 @@ RUN apt-get update && apt-get install -y\
     arviz==0.4.1 \
     neurocombat-sklearn==0.1.3 \
     sklearn-pandas==1.8.0 \
+    seaborn==0.10.0 \
     && jupyter labextension install jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
