@@ -33,6 +33,7 @@ RUN apt-get update && apt-get install -y\
     neurocombat-sklearn==0.1.3 \
     sklearn-pandas==1.8.0 \
     seaborn==0.10.0 \
+    Pillow==7.2.0 \
     && jupyter labextension install jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
