@@ -13,19 +13,23 @@ RUN apt-get update && apt-get install -y\
     graphviz=2.40.1*\
     liblapack-dev \
     gfortran \
-    nodejs \ 
     npm \
+    curl
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
+    apt-get install -y nodejs 
+
+RUN python3 -m pip install --upgrade pip &&\
 # pip
-    && pip3 install \
+    pip3 install \
     wheel \
     numpy==1.17.0 \
-    networkx==1.11 \
+    networkx>=2.0 \
     traits==4.6.0 \
     nipy==0.4.2 \
     nipype==1.1.9 \
     matplotlib==3.1.1 \
-    jupyter==1.0.0 \
-    jupyterlab==0.33.12 \
+    jupyter \
+    jupyterlab \
     pymc3==3.7 \ 
     theano==1.0.4 \
     graphviz==0.13 \
@@ -33,16 +37,18 @@ RUN apt-get update && apt-get install -y\
     neurocombat-sklearn==0.1.3 \
     sklearn-pandas==1.8.0 \
     seaborn==0.10.0 \
-    && jupyter labextension install jupyterlab_vim \
+    Pillow==7.2.0 \
+    tensorflow==2.0.0-alpha0 \
+    && jupyter labextension install @axlair/jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
 EXPOSE 8888
 RUN mkdir /.local && chmod -R 777 /.local &&\
-    mkdir /.jupyter && chmod -R 777 /.jupyter &&\
-    mkdir /.theano && chmod -R 777 /.theano
-
+    mkdir /.jupyter  &&\
+    mkdir /.theano && chmod -R 777 /.theano 
 
 COPY ./.jupyter /.jupyter
+RUN chmod -R 777 /.jupyter
 COPY . /app
 
 # Command to run at startup
