@@ -34,8 +34,23 @@ RUN apt-get update && apt-get install -y\
     sklearn-pandas==1.8.0 \
     seaborn==0.10.0 \
     Pillow==7.2.0 \
+    tensorflow==2.0.0-alpha0 \
     && jupyter labextension install jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
+
+RUN wget -O- http://neuro.debian.net/lists/bionic.us-nh.full | \
+    tee /etc/apt/sources.list.d/neurodebian.sources.list && \ 
+    apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 2649A5A9 \ 
+    && rm -rf /var/lib/apt/lists/* 
+
+RUN apt-get update && apt-get install --no-install-recommends -y\
+    fsl-5.0-core=5.0.9*\
+    libglib2.0-0\
+    libsm6\
+    ants\
+    libxt6\
+    libjpeg62\
+    libglu1-mesa
 
 EXPOSE 8888
 RUN mkdir /.local && chmod -R 777 /.local &&\
@@ -43,6 +58,7 @@ RUN mkdir /.local && chmod -R 777 /.local &&\
     mkdir /.theano && chmod -R 777 /.theano
 
 
+COPY ./bash.bashrc /etc/bash.bashrc
 COPY ./.jupyter /.jupyter
 COPY . /app
 
