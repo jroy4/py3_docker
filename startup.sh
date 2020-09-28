@@ -11,6 +11,7 @@ case "$1" in
   ;; 
 
       *)
+    
     exec jupyter lab --ip=0.0.0.0 
   ;;
 esac

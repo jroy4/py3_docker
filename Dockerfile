@@ -21,6 +21,8 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
 RUN python3 -m pip install --upgrade pip &&\
 # pip
     pip3 install \
+    setuptools>=41.0.0 \
+    scipy==1.4.1 \
     wheel \
     numpy==1.17.0 \
     networkx>=2.0 \
@@ -38,7 +40,7 @@ RUN python3 -m pip install --upgrade pip &&\
     sklearn-pandas==1.8.0 \
     seaborn==0.10.0 \
     Pillow==7.2.0 \
-    tensorflow==2.0.0-alpha0 \
+    tensorflow==2.3.0\
     && jupyter labextension install @axlair/jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
