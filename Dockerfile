@@ -15,12 +15,12 @@ RUN apt-get update && apt-get install -y\
     gfortran \
     npm \
     curl
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - &&\
     apt-get install -y nodejs 
 
-RUN python3 -m pip install --upgrade pip &&\
-# pip
-    pip3 install \
+RUN python3 -m pip install --upgrade pip
+
+RUN    pip3 install \
     setuptools>=41.0.0 \
     scipy==1.4.1 \
     wheel \
