@@ -1,4 +1,5 @@
 #!/bin/bash
+## Set up FSL environment 
 
 FSLDIR=/usr/share/fsl/5.0
 . ${FSLDIR}/etc/fslconf/fsl.sh
@@ -14,7 +15,6 @@ case "$1" in
   debug) 
     bash
   ;; 
-
       *)
     
     exec jupyter lab --ip=0.0.0.0 

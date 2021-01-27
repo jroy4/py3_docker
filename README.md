@@ -1,2 +1,2 @@
 # py3_docker
-Base project to create Python3 Jupyter containers
+Jupyter lab python 3 FSL/numpy/ANTS environment
