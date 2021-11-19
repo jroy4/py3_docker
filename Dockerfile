@@ -51,6 +51,7 @@ RUN wget -O- http://neuro.debian.net/lists/bionic.us-nh.full | \
 
 RUN apt-get update && apt-get install --no-install-recommends -y\
     fsl-5.0-core=5.0.9*\
+    fsl-atlases\
     libglib2.0-0\
     libsm6\
     ants\
