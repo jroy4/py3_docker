@@ -41,6 +41,7 @@ RUN    pip3 install \
     seaborn==0.10.0 \
     Pillow==7.2.0 \
     tensorflow==2.3.0\
+    statsmodels\
     && jupyter labextension install @axlair/jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
