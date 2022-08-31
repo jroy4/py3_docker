@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y\
     liblapack-dev \
     gfortran \
     npm \
-    curl
+    curl \
+    libcairo2
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - &&\
     apt-get install -y nodejs 
 
@@ -42,6 +43,7 @@ RUN    pip3 install \
     Pillow==7.2.0 \
     tensorflow==2.3.0\
     statsmodels\
+    drawSvg\
     && jupyter labextension install @axlair/jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
 
