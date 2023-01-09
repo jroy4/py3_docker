@@ -23,9 +23,8 @@ RUN python3 -m pip install --upgrade pip
 
 RUN    pip3 install \
     setuptools>=41.0.0 \
-    scipy==1.4.1 \
+    scipy>=1.4.1 \
     wheel \
-    numpy==1.17.0 \
     networkx>=2.0 \
     traits==4.6.0 \
     nipy==0.4.2 \
@@ -42,7 +41,32 @@ RUN    pip3 install \
     seaborn==0.10.0 \
     Pillow==7.2.0 \
     tensorflow==2.3.0\
-    statsmodels\
+    statsmodels
+
+RUN pip3 install \
+    autopep8==1.6.0 \
+    certifi==2021.10.8 \
+    charset-normalizer==2.0.7 \
+    click==8.0.3 \
+    et-xmlfile==1.1.0 \
+    Flask==2.0.2 \
+    idna==3.3 \
+    itsdangerous==2.0.1 \
+    Jinja2==3.0.2 \
+    MarkupSafe==2.0.1 \
+    numpy>=1.19.5 \
+    openai\
+    openpyxl==3.0.9 \
+    pycodestyle==2.8.0 \
+    python-dateutil==2.8.2 \
+    python-dotenv==0.19.2 \
+    pytz==2021.3 \
+    requests==2.26.0 \
+    six==1.16.0 \
+    toml==0.10.2 \
+    tqdm==4.62.3 \
+    urllib3==1.26.7 \
+    Werkzeug==2.0.2 \
     drawSvg\
     && jupyter labextension install @axlair/jupyterlab_vim \
     && rm -rf /var/lib/apt/lists/* 
