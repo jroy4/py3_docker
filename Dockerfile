@@ -27,8 +27,8 @@ RUN    pip3 install \
     wheel \
     networkx>=2.0 \
     traits==4.6.0 \
-    nipy==0.4.2 \
-    nipype==1.1.9 \
+    nipy>=0.4.2 \
+    nipype>=1.1.9 \
     matplotlib==3.1.1 \
     jupyter \
     jupyterlab \
